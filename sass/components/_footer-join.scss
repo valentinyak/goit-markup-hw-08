@@ -1,0 +1,21 @@
+.social-networks-links {
+  @include displayFlex();
+}
+.social-networks-links svg {
+  fill: $secondary2-color;
+}
+.social-networks-links a {
+  @include displayFlex();
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+
+  transition: background $primery-transition;
+}
+.social-networks-links li:not(:last-child) {
+  margin-right: 10px;
+}

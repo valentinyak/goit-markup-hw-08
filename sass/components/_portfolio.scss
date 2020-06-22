@@ -1,0 +1,110 @@
+.main-portofolio {
+  padding: 94px 0px;
+}
+.projects-list {
+  @extend %margin-padding-none;
+  @include displayFlex();
+  flex-wrap: wrap;
+}
+.projects-list-item {
+  @include displayFlex();
+  width: 370px;
+
+  transition: all $primery-transition;
+
+  &:hover,
+  &:focus {
+    box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06),
+      0px 1px 1px rgba(0, 0, 0, 0.12);
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+  }
+
+  &:not(:nth-child(3n)) {
+    margin-right: 30px;
+  }
+
+  &:not(:nth-last-child(-n + 3)) {
+    margin-bottom: 30px;
+  }
+}
+.projects-list-content {
+  padding: 20px 24px;
+
+  border: 1px solid #eeeeee;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border-top: none;
+}
+.project-title {
+  margin: 0px 0px 4px;
+
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+}
+.project-type {
+  @extend %margin-padding-none;
+
+  color: $secondary1-color;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.87;
+}
+.overlay {
+  position: relative;
+  overflow: hidden;
+}
+.project-description {
+  position: absolute;
+
+  @include displayFlex();
+  justify-content: center;
+  align-items: center;
+  width: 370px;
+  height: 294px;
+  margin: 0px;
+  padding: 0px 24px;
+
+  color: $secondary2-color;
+  background: rgba(33, 150, 243, 0.9);
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.56;
+
+  transition: transform $primery-transition;
+
+  .projects-list-item:hover &,
+  .projects-list-item:focus & {
+    transform: translateY(-100%);
+  }
+}
+.button-list {
+  @include displayFlex();
+  justify-content: center;
+  margin: 0px 0px 50px;
+  padding: 0px;
+}
+.button-list li:not(:last-child) {
+  margin-right: 8px;
+}
+.portfolio-button {
+  padding: 6px 22px;
+
+  color: $primery-color;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.63;
+  border-radius: 4px;
+  border-width: 0px;
+  background-color: $secondary-bg-color;
+
+  transition: all $primery-transition;
+
+  &:hover,
+  &:focus {
+    background-color: $accent-color;
+    color: $secondary2-color;
+  }
+}

@@ -1,0 +1,24 @@
+%logo {
+  font-family: $secondary-font;
+  font-weight: 700;
+}
+.logo-primery {
+  @extend %logo;
+  margin-right: 85px;
+
+  font-size: 26px;
+  line-height: 1.19;
+}
+.logo-secondary {
+  @extend %logo;
+  font-size: 22px;
+  line-height: 1.18;
+  color: $secondary2-color;
+}
+.logo-web {
+  color: $accent-color;
+}
+.logo-margin {
+  @include displayFlex(inline-block);
+  margin-bottom: 10px;
+}

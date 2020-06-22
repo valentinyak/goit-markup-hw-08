@@ -1,0 +1,43 @@
+.clients {
+  margin: 0px;
+  padding: 94px 0px;
+}
+.clients-title {
+  margin: 0px 0px 50px;
+}
+.clients-list {
+  @extend %margin-padding-none;
+  @include displayFlex();
+}
+
+.clients-list li:not(:last-child) {
+  margin-right: 30px;
+}
+
+.clients-list a {
+  @include displayFlex();
+  justify-content: center;
+  align-items: center;
+  width: 170px;
+  height: 90px;
+
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+
+  transition: border $primery-transition;
+
+  &:hover,
+  &:focus {
+    border: 1px solid $accent-color;
+  }
+}
+.clients-list svg {
+  fill: #afb1b8;
+
+  transition: fill $primery-transition;
+}
+
+.clients-list a:hover > svg,
+.clients-list a:focus > svg {
+  fill: $accent-color;
+}

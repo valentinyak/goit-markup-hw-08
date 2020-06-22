@@ -1,0 +1,67 @@
+%margin-padding-none {
+  margin: 0px;
+  padding: 0px;
+}
+@mixin displayFlex($type: flex) {
+  display: $type;
+}
+body {
+  background-color: $secondary2-color;
+  color: $primery-color;
+  font-family: $primery-font;
+  letter-spacing: 0.03em;
+}
+ul {
+  list-style: none;
+}
+a {
+  @include displayFlex(block);
+
+  text-decoration: none;
+  color: $primery-color;
+}
+img {
+  @include displayFlex(block);
+  max-width: 100%;
+  height: auto;
+}
+h2 {
+  text-align: center;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+}
+button {
+  cursor: pointer;
+}
+footer {
+  padding: 60px 0px 60px;
+
+  background-color: #2f303a;
+}
+.container {
+  width: 1200px;
+  margin: 0px auto;
+  padding: 0px 15px;
+}
+
+.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+.current::after {
+  content: '';
+
+  @include displayFlex(block);
+
+  margin-top: 28px;
+  height: 4px;
+
+  background-color: $accent-color;
+  border-radius: 2px;
+}
+.footer-container {
+  @include displayFlex();
+  justify-content: space-between;
+  align-items: baseline;
+}
