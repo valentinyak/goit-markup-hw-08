@@ -1,0 +1,42 @@
+.main-addr {
+  margin-left: auto;
+}
+.main-addr-list {
+  @extend %margin-padding-none;
+  @include displayFlex();
+}
+.main-addr-list li:not(:last-child) {
+  margin-right: 30px;
+}
+
+.main-addr a {
+  @include displayFlex();
+  align-items: center;
+
+  color: $secondary1-color;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+
+  transition: color $primery-transition;
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+}
+.main-addr svg {
+  margin-right: 10px;
+
+  fill: $secondary1-color;
+
+  transition: fill $primery-transition;
+}
+
+.main-addr a:hover > svg,
+.main-addr a:focus > svg {
+  color: $accent-color;
+  fill: $accent-color;
+}

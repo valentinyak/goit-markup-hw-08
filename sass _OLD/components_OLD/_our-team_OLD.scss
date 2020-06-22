@@ -1,0 +1,83 @@
+.our-team {
+  margin: 0px;
+  padding: 94px 0px;
+
+  background: $secondary-bg-color;
+}
+.our-team .our-team-position {
+  color: $secondary1-color;
+  font-weight: 400;
+}
+.our-team p {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.19;
+  text-align: center;
+}
+.our-team-title {
+  margin: 0px 0px 50px;
+  padding: 0px;
+}
+.our-team-list {
+  @extend %margin-padding-none;
+  @include displayFlex();
+}
+
+.our-team-list > li {
+  width: calc((100%-30 * 3) / 4);
+  padding-bottom: 36px;
+
+  background-color: $secondary2-color;
+  box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 1px 3px rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
+  overflow: hidden;
+
+  &:not(:last-child) {
+    margin-right: 30px;
+  }
+}
+.our-team-foto {
+  margin-bottom: 30px;
+}
+.our-team-name {
+  margin: 0px 0px 10px;
+}
+.our-team-position {
+  margin: 0px 0px 16px;
+}
+.social-networks {
+  @extend %margin-padding-none;
+}
+.social-networks svg {
+  fill: #afb1b8;
+
+  transition: fill $primery-transition;
+}
+.social-networks a {
+  transition: background $primery-transition;
+
+  &:hover,
+  &:focus {
+    background: $accent-color;
+  }
+}
+.social-networks-container {
+  @include displayFlex();
+  justify-content: space-between;
+  margin: 0px 44px;
+}
+.social-networks-container a {
+  @include displayFlex();
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+
+  background: $secondary2-color;
+  border-radius: 50%;
+}
+.social-networks a:hover > svg,
+.social-networks a:focus > svg {
+  fill: $secondary2-color;
+}

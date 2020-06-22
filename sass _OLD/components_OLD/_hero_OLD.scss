@@ -1,0 +1,42 @@
+.hero {
+  max-width: 1600px;
+  height: 600px;
+  margin: 0px auto;
+
+  background-image: linear-gradient(
+      rgba(47, 48, 58, 0.8),
+      rgba(47, 48, 58, 0.8)
+    ),
+    url(../img/hero.jpg);
+  color: $secondary2-color;
+}
+.hero-container {
+  width: 646px;
+  margin: 0px auto;
+  padding: 200px 0px;
+
+  text-align: center;
+}
+.hero-title {
+  margin: 0px 0px 30px;
+
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.36;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.hero-button {
+  @include displayFlex(inline-block);
+  min-width: 200px;
+  padding: 10px 32px;
+
+  border-style: none;
+  background-color: $accent-color;
+  border-radius: 4px;
+  color: $secondary2-color;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
+}

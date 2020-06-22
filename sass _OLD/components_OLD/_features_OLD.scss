@@ -1,0 +1,44 @@
+.features {
+  padding: 94px 0px;
+
+  border-bottom: 1px solid #ececec;
+}
+
+.features-title-h3 {
+  margin: 0px 0px 10px;
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+}
+.features-list {
+  @extend %margin-padding-none;
+  @include displayFlex();
+}
+.features-list li {
+  width: calc((100%-30 * 3) / 4);
+
+  &:not(:last-child) {
+    margin-right: 30px;
+  }
+}
+
+.features-blok {
+  @include displayFlex();
+  justify-content: center;
+  align-items: center;
+
+  height: 120px;
+  margin-bottom: 30px;
+
+  background: $secondary-bg-color;
+  border-radius: 4px;
+}
+.features-paragraph {
+  @extend %margin-padding-none;
+
+  color: $secondary1-color;
+  font-size: 14px;
+  line-height: 1.71;
+}
