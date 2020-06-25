@@ -35,12 +35,10 @@ button {
   cursor: pointer;
 }
 footer {
-  padding: 60px 0px 60px;
-
   background-color: #2f303a;
 }
 .container {
-  width: 1200px;
+  max-width: 480px;
   margin: 0px auto;
   padding: 0px 15px;
 }
@@ -59,9 +57,4 @@ footer {
 
   background-color: $accent-color;
   border-radius: 2px;
-}
-.footer-container {
-  @include displayFlex();
-  justify-content: space-between;
-  align-items: baseline;
 }

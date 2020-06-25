@@ -16,44 +16,44 @@
   </head>
   <body>
     <!-- Шапка сайта -->
-    <header class="header-border">
+    <header>
       <div class="container header-links">
-        <nav class="header-links">
-          <a href="./index.html" class="logo-primery"
-            ><span class="logo-web">Web</span> Studio</a
-          >
+        <a href="./index.html" class="logo-primery"
+          ><span class="logo-web">Web</span> Studio</a
+        >
+        <nav class="header-links visuallyhidden">
           <ul class="site-nav">
             <li>
-              <a href="./index.html">Студия</a>
+              <a href="./index.html" class="current">Студия</a>
             </li>
             <li>
-              <a href="./portfolio.html" class="current">Портфолио</a>
+              <a href="./portfolio.html">Портфолио</a>
             </li>
             <li>
               <a href="">Контакты</a>
             </li>
           </ul>
+          <address class="main-addr">
+            <ul class="main-addr-list">
+              <li>
+                <a href="mailto:info@devstudio.com">
+                  <svg width="16px" height="11px">
+                    <use href="./img/sprite-svg.svg#email"></use>
+                  </svg>
+                  info@devstudio.com</a
+                >
+              </li>
+              <li>
+                <a href="tel:+380961111111">
+                  <svg width="10px" height="15px">
+                    <use href="./img/sprite-svg.svg#phone"></use>
+                  </svg>
+                  +38 096 111 11 11</a
+                >
+              </li>
+            </ul>
+          </address>
         </nav>
-        <address class="main-addr">
-          <ul class="main-addr-list">
-            <li>
-              <a href="mailto:info@devstudio.com">
-                <svg width="16px" height="11px">
-                  <use href="./img/sprite-svg.svg#email"></use>
-                </svg>
-                info@devstudio.com</a
-              >
-            </li>
-            <li>
-              <a href="tel:+380961111111">
-                <svg width="10px" height="15px">
-                  <use href="./img/sprite-svg.svg#phone"></use>
-                </svg>
-                +38 096 111 11 11</a
-              >
-            </li>
-          </ul>
-        </address>
       </div>
     </header>
 

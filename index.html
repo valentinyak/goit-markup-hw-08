@@ -17,12 +17,12 @@
 
   <body>
     <!-- Шапка сайта -->
-    <header class="header-border">
+    <header>
       <div class="container header-links">
-        <nav class="header-links">
-          <a href="./index.html" class="logo-primery"
-            ><span class="logo-web">Web</span> Studio</a
-          >
+        <a href="./index.html" class="logo-primery"
+          ><span class="logo-web">Web</span> Studio</a
+        >
+        <nav class="header-links visuallyhidden">
           <ul class="site-nav">
             <li>
               <a href="./index.html" class="current">Студия</a>
@@ -34,27 +34,27 @@
               <a href="">Контакты</a>
             </li>
           </ul>
+          <address class="main-addr">
+            <ul class="main-addr-list">
+              <li>
+                <a href="mailto:info@devstudio.com">
+                  <svg width="16px" height="11px">
+                    <use href="./img/sprite-svg.svg#email"></use>
+                  </svg>
+                  info@devstudio.com</a
+                >
+              </li>
+              <li>
+                <a href="tel:+380961111111">
+                  <svg width="10px" height="15px">
+                    <use href="./img/sprite-svg.svg#phone"></use>
+                  </svg>
+                  +38 096 111 11 11</a
+                >
+              </li>
+            </ul>
+          </address>
         </nav>
-        <address class="main-addr">
-          <ul class="main-addr-list">
-            <li>
-              <a href="mailto:info@devstudio.com">
-                <svg width="16px" height="11px">
-                  <use href="./img/sprite-svg.svg#email"></use>
-                </svg>
-                info@devstudio.com</a
-              >
-            </li>
-            <li>
-              <a href="tel:+380961111111">
-                <svg width="10px" height="15px">
-                  <use href="./img/sprite-svg.svg#phone"></use>
-                </svg>
-                +38 096 111 11 11</a
-              >
-            </li>
-          </ul>
-        </address>
       </div>
     </header>
 
@@ -66,88 +66,6 @@
           <div class="hero-container">
             <h1 class="hero-title">эффективные решения для вашего бизнеса</h1>
             <button class="hero-button" data-modal-open>Заказать услугу</button>
-            <div class="backdrop is-hidden" data-modal>
-              <form class="modal">
-                <div class="modal-section">
-                  <h3 class="modal-title">
-                    Оставьте свои данные, мы вам перезвоним
-                  </h3>
-                  <div class="form-field">
-                    <input
-                      type="text"
-                      name="name"
-                      id="name"
-                      autocomplete="off"
-                      placeholder=" "
-                    />
-                    <label for="name">Имя</label>
-                    <svg width="18px" height="18px">
-                      <use href="./img/sprite-svg.svg#name-input"></use>
-                    </svg>
-                  </div>
-                  <div class="form-field">
-                    <input
-                      type="tel"
-                      name="tel"
-                      id="tel"
-                      autocomplete="off"
-                      placeholder=" "
-                    />
-                    <label for="tel">Телефон</label>
-                    <svg width="18px" height="18px">
-                      <use href="./img/sprite-svg.svg#phone-input"></use>
-                    </svg>
-                  </div>
-                  <div class="form-field">
-                    <input
-                      type="email"
-                      name="email"
-                      id="email"
-                      autocomplete="off"
-                      placeholder=" "
-                    />
-                    <label for="email">Почта</label>
-                    <svg width="18px" height="18px">
-                      <use href="./img/sprite-svg.svg#email-input"></use>
-                    </svg>
-                  </div>
-                  <div class="form-field-textarea">
-                    <textarea
-                      name="coments"
-                      id="coments"
-                      cols="30"
-                      rows="5"
-                      placeholder=" "
-                    ></textarea>
-                    <label for="coments">Комментарий</label>
-                  </div>
-                  <div class="form-field form-field-checkbox">
-                    <input
-                      type="checkbox"
-                      name="policy"
-                      id="policy"
-                      placeholder=" "
-                      class="visuallyhidden"
-                    />
-                    <label for="policy"
-                      ><span></span>
-                      <p>
-                        Соглашаюсь с рассылкой и принимаю
-                        <a href="">Условия договора</a>
-                      </p>
-                    </label>
-                  </div>
-                  <div class="submit-button-container">
-                    <button type="submit">Отправить</button>
-                  </div>
-                  <div class="close" data-modal-close>
-                    <svg width="11px" height="11px">
-                      <use href="./img/sprite-svg.svg#close"></use>
-                    </svg>
-                  </div>
-                </div>
-              </form>
-            </div>
           </div>
         </div>
       </section>
@@ -575,6 +493,89 @@
         </div>
       </div>
     </footer>
+    <div class="backdrop is-hidden" data-modal>
+      <form class="modal">
+        <div class="modal-section">
+          <h3 class="modal-title">
+            Оставьте свои данные, мы вам перезвоним
+          </h3>
+          <div class="form-field">
+            <input
+              type="text"
+              name="name"
+              id="name"
+              autocomplete="off"
+              placeholder=" "
+            />
+            <label for="name">Имя</label>
+            <svg width="18px" height="18px">
+              <use href="./img/sprite-svg.svg#name-input"></use>
+            </svg>
+          </div>
+          <div class="form-field">
+            <input
+              type="tel"
+              name="tel"
+              id="tel"
+              autocomplete="off"
+              placeholder=" "
+            />
+            <label for="tel">Телефон</label>
+            <svg width="18px" height="18px">
+              <use href="./img/sprite-svg.svg#phone-input"></use>
+            </svg>
+          </div>
+          <div class="form-field">
+            <input
+              type="email"
+              name="email"
+              id="email"
+              autocomplete="off"
+              placeholder=" "
+            />
+            <label for="email">Почта</label>
+            <svg width="18px" height="18px">
+              <use href="./img/sprite-svg.svg#email-input"></use>
+            </svg>
+          </div>
+          <div class="form-field-textarea">
+            <textarea
+              name="coments"
+              id="coments"
+              cols="30"
+              rows="5"
+              placeholder=" "
+            ></textarea>
+            <label for="coments">Комментарий</label>
+          </div>
+          <div class="form-field form-field-checkbox">
+            <input
+              type="checkbox"
+              name="policy"
+              id="policy"
+              placeholder=" "
+              class="visuallyhidden"
+            />
+            <label for="policy"
+              ><span></span>
+              <p>
+                Соглашаюсь с рассылкой и принимаю
+                <a href="">Условия договора</a>
+              </p>
+            </label>
+          </div>
+          <div class="submit-button-container">
+            <button type="submit">Отправить</button>
+          </div>
+          <div class="close" data-modal-close>
+            <svg width="11px" height="11px">
+              <use href="./img/sprite-svg.svg#close"></use>
+            </svg>
+          </div>
+        </div>
+      </form>
+    </div>
     <script src="./js/modal.js"></script>
+    <script src="./js/menu.js"></script>
   </body>
 </html>

@@ -1,24 +1,30 @@
 .clients {
   margin: 0px;
-  padding: 94px 0px;
+  padding: 60px 0px;
 }
 .clients-title {
-  margin: 0px 0px 50px;
+  margin: 0px 0px 30px;
+
+  font-size: 28px;
+  line-height: 1.18;
 }
 .clients-list {
   @extend %margin-padding-none;
-  @include displayFlex();
+  display: flex;
+  flex-wrap: wrap;
+
+  margin: -15px;
 }
 
-.clients-list li:not(:last-child) {
-  margin-right: 30px;
+.clients-list li {
+  margin: 15px;
+  width: calc((100% - 4 * 15px) / 2);
 }
 
 .clients-list a {
-  @include displayFlex();
+  display: flex;
   justify-content: center;
   align-items: center;
-  width: 170px;
   height: 90px;
 
   border: 1px solid #afb1b8;

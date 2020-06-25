@@ -1,7 +1,6 @@
-.header-border {
-  border-bottom: 1px solid #ececec;
-}
 .header-links {
-  @include displayFlex();
+  /*   @include displayFlex();
   align-items: center;
+ */
+  border-bottom: 1px solid #ececec;
 }

@@ -1,0 +1,7 @@
+.footer-container {
+  padding: 60px 0px;
+  text-align: center;
+}
+.footer-container > div:not(:last-child) {
+  margin-bottom: 60px;
+}
