@@ -4,6 +4,7 @@
 }
 .logo-primery {
   @extend %logo;
+  display: inline-block;
   padding: 16px 0px;
 
   font-size: 24px;

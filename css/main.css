@@ -9,7 +9,7 @@
   border: 0;
 }
 
-.form-field-checkbox p, .features-list, .features-paragraph, .our-team-list, .social-networks, .clients-list, .follow-button {
+.menu-button, .site-nav, .main-addr-list, .form-field-checkbox p, .features-list, .features-paragraph, .our-team-list, .social-networks, .clients-list, .follow-button {
   margin: 0px;
   padding: 0px;
 }
@@ -66,16 +66,20 @@ footer {
 .current::after {
   content: '';
   display: block;
-  margin-top: 28px;
+  margin-top: 8px;
   height: 4px;
   background-color: #2196f3;
   border-radius: 2px;
 }
 
 .header-links {
-  /*   @include displayFlex();
-  align-items: center;
- */
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   border-bottom: 1px solid #ececec;
 }
 
@@ -85,6 +89,7 @@ footer {
 }
 
 .logo-primery {
+  display: inline-block;
   padding: 16px 0px;
   font-size: 24px;
   line-height: 1.17;
@@ -103,6 +108,134 @@ footer {
 .logo-margin {
   display: inline-block;
   margin-bottom: 20px;
+}
+
+.menu-button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
+.menu-button > svg {
+  fill: #212121;
+}
+
+.menu-button > svg:hover > use:first-child {
+  fill: #2196f3;
+}
+
+@media screen and (min-width: 481px) {
+  .menu-button > svg:hover {
+    fill: #2196f3;
+  }
+}
+
+.menu-button.is-open .icon-menu {
+  display: none;
+}
+
+.menu-button.is-open .icon-cross {
+  display: block;
+}
+
+.menu-button .icon-cross {
+  display: none;
+}
+
+.menu-button.is-open + .menu {
+  display: block;
+}
+
+.menu {
+  position: absolute;
+  left: 0px;
+  top: 61px;
+  display: none;
+  width: 100%;
+  background-color: #ffffff;
+}
+
+.site-nav {
+  text-align: center;
+}
+
+.site-nav > li {
+  padding: 0px;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.17;
+  letter-spacing: 0.02em;
+}
+
+.site-nav > li:first-child > a {
+  padding: 60px 0px 20px;
+}
+
+.site-nav > li:nth-child(2) > a {
+  padding: 20px 0px;
+}
+
+.site-nav > li:last-child > a {
+  padding: 20px 0px 60px;
+}
+
+.site-nav a {
+  -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.site-nav a:hover, .site-nav a:focus {
+  color: #2196f3;
+}
+
+.site-nav > li a {
+  display: inline-block;
+  /* padding: 0px 0px; */
+}
+
+.site-nav .current {
+  padding-bottom: 0px;
+  color: #2196f3;
+}
+
+.main-addr {
+  text-align: center;
+}
+
+.main-addr a {
+  color: #757575;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.17;
+  letter-spacing: 0.02em;
+  -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.main-addr a:hover, .main-addr a:focus {
+  color: #2196f3;
+}
+
+.main-addr svg {
+  margin-right: 10px;
+  fill: #757575;
+  -webkit-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.main-addr a:hover > svg,
+.main-addr a:focus > svg {
+  color: #2196f3;
+  fill: #2196f3;
+}
+
+.main-addr-list > li:not(:last-child) {
+  margin-bottom: 16px;
+}
+
+.main-addr-list > li:last-child {
+  margin-bottom: 60px;
 }
 
 .hero {
@@ -161,6 +294,10 @@ footer {
   letter-spacing: 0.06em;
 }
 
+body.modal-open {
+  overflow: hidden;
+}
+
 .backdrop {
   position: fixed;
   top: 0;
@@ -169,6 +306,7 @@ footer {
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.2);
+  overflow-y: scroll;
   -webkit-transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }

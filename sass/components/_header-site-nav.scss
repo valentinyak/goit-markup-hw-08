@@ -1,0 +1,83 @@
+.menu-button {
+  @extend %margin-padding-none;
+
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+.menu-button > svg {
+  fill: $primery-color;
+}
+
+.menu-button > svg:hover > use:first-child {
+  fill: $accent-color;
+}
+@media screen and (min-width: 481px) {
+  .menu-button > svg:hover {
+    fill: $accent-color;
+  }
+}
+.menu-button.is-open .icon-menu {
+  display: none;
+}
+.menu-button.is-open .icon-cross {
+  display: block;
+}
+.menu-button .icon-cross {
+  display: none;
+}
+.menu-button.is-open + .menu {
+  display: block;
+}
+.menu {
+  position: absolute;
+  left: 0px;
+  top: 61px;
+
+  display: none;
+  width: 100%;
+
+  background-color: $secondary2-color;
+}
+.site-nav {
+  @extend %margin-padding-none;
+
+  text-align: center;
+}
+.site-nav > li {
+  padding: 0px;
+
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.17;
+  letter-spacing: 0.02em;
+
+  &:first-child > a {
+    padding: 60px 0px 20px;
+  }
+
+  &:nth-child(2) > a {
+    padding: 20px 0px;
+  }
+
+  &:last-child > a {
+    padding: 20px 0px 60px;
+  }
+}
+.site-nav a {
+  transition: color $primery-transition;
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+}
+.site-nav > li a {
+  display: inline-block;
+  /* padding: 0px 0px; */
+}
+.site-nav .current {
+  padding-bottom: 0px;
+
+  color: $accent-color;
+}
