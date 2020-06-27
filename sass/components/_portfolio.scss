@@ -58,14 +58,14 @@
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 294px;
+  height: 100%;
   margin: 0px;
   padding: 0px 24px;
 
   color: $secondary2-color;
   background: rgba(33, 150, 243, 0.9);
   font-weight: 400;
-  font-size: 18px;
+  font-size: 3.75vw;
   line-height: 1.56;
 
   transition: transform $primery-transition;
@@ -73,6 +73,10 @@
   .projects-list-item:hover &,
   .projects-list-item:focus & {
     transform: translateY(-100%);
+  }
+
+  @media screen and (min-width: 480px) {
+    font-size: 18px;
   }
 }
 .button-list {

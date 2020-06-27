@@ -269,7 +269,7 @@ body.modal-open {
 .form-field-checkbox input:checked + label > span {
   background-color: $accent-color;
   background-image: url(../img/icon-check.svg);
-  background-size: contain;
+  background-size: cover;
   background-origin: border-box;
   border-color: transparent;
 }
