@@ -317,6 +317,12 @@ footer {
 
 @media screen and (min-width: 768px) {
   .main-addr a {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     font-size: 12px;
   }
 }
