@@ -205,15 +205,39 @@
           <h2 class="our-team-title">Наша команда</h2>
           <ul class="our-team-list">
             <li>
-              <img
-                class="our-team-foto"
-                src="./img/our-team/john-smith-480.jpg"
-                alt="John Smith foto"
-                srcset="
-                  ./img/our-team/john-smith-480@2x.jpg 2x,
-                  ./img/our-team/john-smith-480@3x.jpg 3x
-                "
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./img/our-team/john-smith-480.jpg    1x,
+                    ./img/our-team/john-smith-480@2x.jpg 2x,
+                    ./img/our-team/john-smith-480@3x.jpg 3x
+                  "
+                  media="(max-width: 767px)"
+                />
+                <source
+                  srcset="
+                    ./img/our-team/john-smith-1200.jpg    1x,
+                    ./img/our-team/john-smith-1200@2x.jpg 2x,
+                    ./img/our-team/john-smith-1200@3x.jpg 3x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./img/our-team/john-smith-768.jpg    1x,
+                    ./img/our-team/john-smith-768@2x.jpg 2x,
+                    ./img/our-team/john-smith-768@3x.jpg 3x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <img
+                  src="./img/our-team/john-smith-480.jpg"
+                  alt="John Smith foto"
+                  sizes="(min-width: 1200px) 1200px, (min-width: 768px) 768px, 480px"
+                  class="our-team-foto"
+                />
+              </picture>
+
               <p class="our-team-name">John Smith</p>
               <p class="our-team-position">Product Designer</p>
               <ul class="social-networks">
@@ -250,15 +274,39 @@
               </ul>
             </li>
             <li>
-              <img
-                class="our-team-foto"
-                src="./img/our-team/marta-stewart-480.jpg"
-                alt="Marta Stewart foto"
-                srcset="
-                  ./img/our-team/marta-stewart-480@2x.jpg 2x,
-                  ./img/our-team/marta-stewart-480@3x.jpg 3x
-                "
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./img/our-team/marta-stewart-480.jpg    1x,
+                    ./img/our-team/marta-stewart-480@2x.jpg 2x,
+                    ./img/our-team/marta-stewart-480@3x.jpg 3x
+                  "
+                  media="(max-width: 767px)"
+                />
+                <source
+                  srcset="
+                    ./img/our-team/marta-stewart-1200.jpg    1x,
+                    ./img/our-team/marta-stewart-1200@2x.jpg 2x,
+                    ./img/our-team/marta-stewart-1200@3x.jpg 3x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./img/our-team/marta-stewart-768.jpg    1x,
+                    ./img/our-team/marta-stewart-768@2x.jpg 2x,
+                    ./img/our-team/marta-stewart-768@3x.jpg 3x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <img
+                  src="./img/our-team/marta-stewart-480.jpg"
+                  alt="John Smith foto"
+                  sizes="(min-width: 1200px) 1200px, (min-width: 768px) 768px, 480px"
+                  class="our-team-foto"
+                />
+              </picture>
+
               <p class="our-team-name">Marta Stewart</p>
               <p class="our-team-position">Frontend Developer</p>
               <ul class="social-networks">
@@ -295,15 +343,39 @@
               </ul>
             </li>
             <li>
-              <img
-                class="our-team-foto"
-                src="./img/our-team/robert-jakis-480.jpg"
-                alt="Robert Jakis foto"
-                srcset="
-                  ./img/our-team/robert-jakis-480@2x.jpg 2x,
-                  ./img/our-team/robert-jakis-480@3x.jpg 3x
-                "
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./img/our-team/robert-jakis-480.jpg    1x,
+                    ./img/our-team/robert-jakis-480@2x.jpg 2x,
+                    ./img/our-team/robert-jakis-480@3x.jpg 3x
+                  "
+                  media="(max-width: 767px)"
+                />
+                <source
+                  srcset="
+                    ./img/our-team/robert-jakis-1200.jpg    1x,
+                    ./img/our-team/robert-jakis-1200@2x.jpg 2x,
+                    ./img/our-team/robert-jakis-1200@3x.jpg 3x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./img/our-team/robert-jakis-768.jpg    1x,
+                    ./img/our-team/robert-jakis-768@2x.jpg 2x,
+                    ./img/our-team/robert-jakis-768@3x.jpg 3x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <img
+                  src="./img/our-team/robert-jakis-480.jpg"
+                  alt="John Smith foto"
+                  sizes="(min-width: 1200px) 1200px, (min-width: 768px) 768px, 480px"
+                  class="our-team-foto"
+                />
+              </picture>
+
               <p class="our-team-name">Robert Jakis</p>
               <p class="our-team-position">Marketing</p>
               <ul class="social-networks">
@@ -340,15 +412,39 @@
               </ul>
             </li>
             <li>
-              <img
-                class="our-team-foto"
-                src="./img/our-team/martin-doe-480.jpg"
-                alt="Martin Doe foto"
-                srcset="
-                  ./img/our-team/martin-doe-480@2x.jpg 2x,
-                  ./img/our-team/martin-doe-480@3x.jpg 3x
-                "
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./img/our-team/martin-doe-480.jpg    1x,
+                    ./img/our-team/martin-doe-480@2x.jpg 2x,
+                    ./img/our-team/martin-doe-480@3x.jpg 3x
+                  "
+                  media="(max-width: 767px)"
+                />
+                <source
+                  srcset="
+                    ./img/our-team/martin-doe-1200.jpg    1x,
+                    ./img/our-team/martin-doe-1200@2x.jpg 2x,
+                    ./img/our-team/martin-doe-1200@3x.jpg 3x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./img/our-team/martin-doe-768.jpg    1x,
+                    ./img/our-team/martin-doe-768@2x.jpg 2x,
+                    ./img/our-team/martin-doe-768@3x.jpg 3x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <img
+                  src="./img/our-team/martin-doe-480.jpg"
+                  alt="John Smith foto"
+                  sizes="(min-width: 1200px) 1200px, (min-width: 768px) 768px, 480px"
+                  class="our-team-foto"
+                />
+              </picture>
+
               <p class="our-team-name">Martin Doe</p>
               <p class="our-team-position">UI Designer</p>
               <ul class="social-networks">
