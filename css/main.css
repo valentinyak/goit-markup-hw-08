@@ -532,6 +532,12 @@ body.modal-open {
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+@media screen and (min-width: 1200px) {
+  .modal {
+    max-width: 528px;
+  }
+}
+
 .backdrop.is-hidden .modal {
   -webkit-transform: translate(-50%, -50%) scale(2);
           transform: translate(-50%, -50%) scale(2);
@@ -793,6 +799,13 @@ body.modal-open {
   line-height: 1.17;
   letter-spacing: 0.03em;
   color: #757575;
+}
+
+@media screen and (min-width: 1200px) {
+  .form-field.form-field-checkbox label[for='policy'], .form-field-checkbox.form-field-textarea label[for='policy'] {
+    font-size: 14px;
+    line-height: 1.71;
+  }
 }
 
 .form-field-checkbox a {
