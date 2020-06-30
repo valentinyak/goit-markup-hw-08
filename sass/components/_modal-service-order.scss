@@ -108,6 +108,10 @@ body.modal-open {
   text-align: center;
   letter-spacing: 0.03em;
   color: $primery-color;
+
+  @media screen and (min-width: 1200px) {
+    line-height: 23px;
+  }
 }
 .form-field {
   position: relative;
