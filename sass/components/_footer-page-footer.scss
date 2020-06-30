@@ -1,7 +1,38 @@
 .footer-container {
   padding: 60px 0px;
   text-align: center;
+
+  @media screen and (min-width: 1200px) {
+    display: flex;
+
+    text-align: left;
+  }
 }
 .footer-container > div:not(:last-child) {
   margin-bottom: 60px;
+
+  @media screen and (min-width: 1200px) {
+    margin: 0px;
+  }
+}
+
+.footer-container-links {
+  @media screen and (min-width: 768px) {
+    @include displayFlex();
+
+    & > div:first-child {
+      margin-left: 60px;
+      margin-right: 165px;
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    & > div:first-child {
+      margin-left: 0px;
+      margin-right: 69px;
+    }
+    & > div:nth-child(2) {
+      margin-right: 94px;
+    }
+  }
 }

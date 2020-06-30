@@ -1,3 +1,10 @@
+.footer-address {
+  margin-bottom: 60px;
+
+  @media screen and (min-width: 768px) {
+    margin-bottom: 0px;
+  }
+}
 .footer-address > a {
   font-style: normal;
   font-size: 14px;

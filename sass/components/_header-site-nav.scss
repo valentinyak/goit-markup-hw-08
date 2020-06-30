@@ -1,19 +1,24 @@
 .menu-button {
   @extend %margin-padding-none;
+  display: none;
 
-  background-color: transparent;
-  border: none;
-  outline: none;
+  @media screen and (max-width: 767px) {
+    display: block;
+
+    background-color: transparent;
+    border: none;
+    outline: none;
+  }
 }
 .menu-button > svg {
   fill: $primery-color;
 }
 
-.menu-button > svg:hover > use:first-child {
+.menu-switch-svg:hover > use:first-child {
   fill: $accent-color;
 }
-@media screen and (min-width: 481px) {
-  .menu-button > svg:hover {
+@media screen and (min-width: 1200px) {
+  .menu-switch-svg:hover {
     fill: $accent-color;
   }
 }
@@ -30,39 +35,63 @@
   display: block;
 }
 .menu {
-  position: absolute;
-  left: 0px;
-  top: 61px;
-  z-index: 999;
-
-  display: none;
-  width: 100%;
+  @include displayFlex();
+  align-items: center;
 
   background-color: $secondary2-color;
+
+  @media screen and (max-width: 767px) {
+    position: absolute;
+    left: 0px;
+    top: 61px;
+    z-index: 999;
+
+    display: none;
+    width: 100%;
+  }
 }
 .site-nav {
   @extend %margin-padding-none;
+  @include displayFlex();
+  margin-right: 84px;
 
+  font-size: 14px;
+  line-height: 1.14;
+  font-weight: 500;
+  letter-spacing: 0.02em;
   text-align: center;
+
+  @media screen and (max-width: 767px) {
+    @include displayFlex(block);
+    margin-right: 0px;
+
+    font-size: 18px;
+    line-height: 1.17;
+  }
+  @media screen and (min-width: 1200px) {
+    margin-right: 305px;
+  }
 }
 .site-nav > li {
   padding: 0px;
 
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 1.17;
-  letter-spacing: 0.02em;
-
-  &:first-child > a {
-    padding: 60px 0px 20px;
+  &:not(:last-child) {
+    margin-right: 50px;
   }
 
-  &:nth-child(2) > a {
+  @media screen and (max-width: 767px) {
     padding: 20px 0px;
-  }
 
-  &:last-child > a {
-    padding: 20px 0px 60px;
+    &:first-child {
+      padding: 60px 0px 20px;
+    }
+
+    &:last-child {
+      padding: 20px 0px 60px;
+    }
+    &:not(:last-child) {
+      margin-right: 0px;
+    }
   }
 }
 .site-nav a {
@@ -75,7 +104,10 @@
 }
 .site-nav > li a {
   display: inline-block;
-  /* padding: 0px 0px; */
+
+  @media screen and (min-width: 768px) {
+    padding: 32px 0px;
+  }
 }
 .site-nav .current {
   padding-bottom: 0px;

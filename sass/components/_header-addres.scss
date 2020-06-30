@@ -1,5 +1,7 @@
-.main-addr {
-  text-align: center;
+@media screen and (max-width: 767px) {
+  .main-addr {
+    text-align: center;
+  }
 }
 .main-addr a {
   color: $secondary1-color;
@@ -14,6 +16,14 @@
   &:hover,
   &:focus {
     color: $accent-color;
+  }
+
+  @media screen and (min-width: 768px) {
+    font-size: 12px;
+  }
+  @media screen and (min-width: 1200px) {
+    font-size: 14px;
+    line-height: 1.14;
   }
 }
 .main-addr svg {
@@ -31,12 +41,27 @@
 }
 .main-addr-list {
   @extend %margin-padding-none;
+
+  @media screen and (min-width: 1200px) {
+    @include displayFlex();
+  }
 }
 .main-addr-list > li {
   &:not(:last-child) {
-    margin-bottom: 16px;
+    margin-bottom: 10px;
   }
-  &:last-child {
-    margin-bottom: 60px;
+  @media screen and (max-width: 767px) {
+    &:not(:last-child) {
+      margin-bottom: 16px;
+    }
+    &:last-child {
+      margin-bottom: 60px;
+    }
+  }
+  @media screen and (min-width: 1200px) {
+    &:not(:last-child) {
+      margin-bottom: 0px;
+      margin-right: 30px;
+    }
   }
 }

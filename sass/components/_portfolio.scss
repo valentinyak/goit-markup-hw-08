@@ -1,13 +1,30 @@
 .main-portofolio {
   padding: 60px 0px;
+
+  @media screen and (min-width: 1200px) {
+    padding: 94px 0px;
+  }
 }
 .projects-list {
-  @extend %margin-padding-none;
   @include displayFlex();
   flex-wrap: wrap;
+  @extend %margin-padding-none;
+
+  @media screen and (min-width: 768px) {
+    margin: -15px;
+  }
 }
 .projects-list-item {
   @include displayFlex();
+
+  @media screen and (min-width: 768px) {
+    width: calc((100% - 4 * 15px) / 2);
+    margin: 15px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: calc((100% - 6 * 15px) / 3);
+  }
 
   transition: all $primery-transition;
 
@@ -19,8 +36,10 @@
     border-bottom-left-radius: 5px;
   }
 
-  &:not(:last-child) {
-    margin-bottom: 30px;
+  @media screen and (max-width: 767px) {
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
   }
 }
 .projects-list-content {
@@ -38,6 +57,14 @@
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
+
+  @media screen and (min-width: 768px) {
+    width: 306px;
+
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+  }
 }
 .project-type {
   @extend %margin-padding-none;
@@ -84,13 +111,27 @@
   flex-wrap: wrap;
   @extend %margin-padding-none;
   margin-bottom: 40px;
+
+  @media screen and (min-width: 768px) {
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 50px;
+  }
 }
 .button-list li {
+  margin-bottom: 0px;
+
   &:not(:last-child) {
     margin-right: 8px;
   }
-  &:nth-child(-n + 3) {
-    margin-bottom: 15px;
+
+  @media screen and (max-width: 767px) {
+    &:nth-child(-n + 3) {
+      margin-bottom: 15px;
+    }
   }
 }
 

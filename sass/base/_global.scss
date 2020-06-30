@@ -41,6 +41,13 @@ footer {
   max-width: 480px;
   margin: 0px auto;
   padding: 0px 15px;
+
+  @media screen and (min-width: 768px) {
+    max-width: 768px;
+  }
+  @media screen and (min-width: 1200px) {
+    max-width: 1200px;
+  }
 }
 
 .is-hidden {
@@ -57,4 +64,8 @@ footer {
 
   background-color: $accent-color;
   border-radius: 2px;
+
+  @media screen and (min-width: 768px) {
+    margin-top: 24px;
+  }
 }

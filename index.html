@@ -33,6 +33,7 @@
             width="40"
             height="40"
             aria-label="Переключатель мобильного меню"
+            class="menu-switch-svg"
           >
             <use class="icon-cross" href="./img/sprite-svg.svg#cross"></use>
             <use class="icon-menu" href="./img/sprite-svg.svg#menu"></use>
@@ -154,8 +155,10 @@
                 ><img
                   src="./img/features/img1.jpg"
                   alt="Картинка десктопных приложений"
-                  width="370"
-                  height="294"
+                  srcset="
+                    ./img/features/img1@2x.jpg 2x,
+                    ./img/features/img1@3x.jpg 3x
+                  "
                 />
                 <div class="our-work-description">
                   <p>Десктопные приложения</p>
@@ -167,8 +170,10 @@
                 ><img
                   src="./img/features/img2.jpg"
                   alt="Картинка мобильных приложений"
-                  width="370"
-                  height="294"
+                  srcset="
+                    ./img/features/img2@2x.jpg 2x,
+                    ./img/features/img2@3x.jpg 3x
+                  "
                 />
                 <div class="our-work-description">
                   <p>Мобильные приложения</p>
@@ -180,8 +185,10 @@
                 ><img
                   src="./img/features/img3.jpg"
                   alt="Картинка дизайнерских решений"
-                  width="370"
-                  height="294"
+                  srcset="
+                    ./img/features/img3@2x.jpg 2x,
+                    ./img/features/img3@3x.jpg 3x
+                  "
                 />
                 <div class="our-work-description">
                   <p>Дизайнерские решения</p>
@@ -200,8 +207,12 @@
             <li>
               <img
                 class="our-team-foto"
-                src="./img/our-team/john-smith.jpg"
+                src="./img/our-team/john-smith-480.jpg"
                 alt="John Smith foto"
+                srcset="
+                  ./img/our-team/john-smith-480@2x.jpg 2x,
+                  ./img/our-team/john-smith-480@3x.jpg 3x
+                "
               />
               <p class="our-team-name">John Smith</p>
               <p class="our-team-position">Product Designer</p>
@@ -241,8 +252,12 @@
             <li>
               <img
                 class="our-team-foto"
-                src="./img/our-team/marta-stewart.jpg"
+                src="./img/our-team/marta-stewart-480.jpg"
                 alt="Marta Stewart foto"
+                srcset="
+                  ./img/our-team/marta-stewart-480@2x.jpg 2x,
+                  ./img/our-team/marta-stewart-480@3x.jpg 3x
+                "
               />
               <p class="our-team-name">Marta Stewart</p>
               <p class="our-team-position">Frontend Developer</p>
@@ -282,8 +297,12 @@
             <li>
               <img
                 class="our-team-foto"
-                src="./img/our-team/robert-jakis.jpg"
+                src="./img/our-team/robert-jakis-480.jpg"
                 alt="Robert Jakis foto"
+                srcset="
+                  ./img/our-team/robert-jakis-480@2x.jpg 2x,
+                  ./img/our-team/robert-jakis-480@3x.jpg 3x
+                "
               />
               <p class="our-team-name">Robert Jakis</p>
               <p class="our-team-position">Marketing</p>
@@ -323,8 +342,12 @@
             <li>
               <img
                 class="our-team-foto"
-                src="./img/our-team/martin-doe.jpg"
+                src="./img/our-team/martin-doe-480.jpg"
                 alt="Martin Doe foto"
+                srcset="
+                  ./img/our-team/martin-doe-480@2x.jpg 2x,
+                  ./img/our-team/martin-doe-480@3x.jpg 3x
+                "
               />
               <p class="our-team-name">Martin Doe</p>
               <p class="our-team-position">UI Designer</p>
@@ -426,59 +449,61 @@
     <footer>
       <div class="container">
         <div class="footer-container">
-          <div>
-            <a href="./index.html" class="logo-secondary logo-margin"
-              ><span class="logo-web">Web</span> Studio</a
-            >
-            <address class="footer-address">
-              <a
-                href="https://goo.gl/maps/tPkDzDL7LACH9RPQ9"
-                target="_blank"
-                class="addr-map"
-                >г. Киев, пр-т Леси Украинки, 26</a
+          <div class="footer-container-links">
+            <div>
+              <a href="./index.html" class="logo-secondary logo-margin"
+                ><span class="logo-web">Web</span> Studio</a
               >
-              <a href="mailto:info@example.com" class="addr-email"
-                >info@example.com</a
-              >
-              <a href="tel:+380991111111" class="addr-phone"
-                >+38 099 111 11 11</a
-              >
-            </address>
-          </div>
-          <div>
-            <h3 class="follow-title">присоединяйтесь</h3>
-            <ul class="social-networks">
-              <div class="social-networks-links">
-                <li>
-                  <a href="" aria-label="Ссылка на Instagram">
-                    <svg width="20" height="20">
-                      <use href="./img/sprite-svg.svg#instagram-logo"></use>
-                    </svg>
-                  </a>
-                </li>
-                <li>
-                  <a href="" aria-label="Ссылка на Twitter">
-                    <svg width="20" height="20">
-                      <use href="./img/sprite-svg.svg#twitter-logo"></use>
-                    </svg>
-                  </a>
-                </li>
-                <li>
-                  <a href="" aria-label="Ссылка на Facebook"
-                    ><svg width="20" height="20">
-                      <use href="./img/sprite-svg.svg#facebook-logo"></use>
-                    </svg>
-                  </a>
-                </li>
-                <li>
-                  <a href="" aria-label="Ссылка на LinkedIn"
-                    ><svg width="20" height="20">
-                      <use href="./img/sprite-svg.svg#linkedin-logo"></use>
-                    </svg>
-                  </a>
-                </li>
-              </div>
-            </ul>
+              <address class="footer-address">
+                <a
+                  href="https://goo.gl/maps/tPkDzDL7LACH9RPQ9"
+                  target="_blank"
+                  class="addr-map"
+                  >г. Киев, пр-т Леси Украинки, 26</a
+                >
+                <a href="mailto:info@example.com" class="addr-email"
+                  >info@example.com</a
+                >
+                <a href="tel:+380991111111" class="addr-phone"
+                  >+38 099 111 11 11</a
+                >
+              </address>
+            </div>
+            <div>
+              <h3 class="follow-title">присоединяйтесь</h3>
+              <ul class="social-networks">
+                <div class="social-networks-links">
+                  <li>
+                    <a href="" aria-label="Ссылка на Instagram">
+                      <svg width="20" height="20">
+                        <use href="./img/sprite-svg.svg#instagram-logo"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="" aria-label="Ссылка на Twitter">
+                      <svg width="20" height="20">
+                        <use href="./img/sprite-svg.svg#twitter-logo"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="" aria-label="Ссылка на Facebook"
+                      ><svg width="20" height="20">
+                        <use href="./img/sprite-svg.svg#facebook-logo"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="" aria-label="Ссылка на LinkedIn"
+                      ><svg width="20" height="20">
+                        <use href="./img/sprite-svg.svg#linkedin-logo"></use>
+                      </svg>
+                    </a>
+                  </li>
+                </div>
+              </ul>
+            </div>
           </div>
           <div>
             <h3 class="follow-title">Подпишитесь на рассылку</h3>
@@ -502,6 +527,7 @@
         </div>
       </div>
     </footer>
+    <!-- Модалка -->
     <div class="backdrop is-hidden" data-modal>
       <form class="modal">
         <div class="modal-section">

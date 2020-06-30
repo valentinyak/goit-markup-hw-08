@@ -4,17 +4,30 @@
 }
 .logo-primery {
   @extend %logo;
-  display: inline-block;
+  @include displayFlex(inline-block);
   padding: 16px 0px;
 
   font-size: 24px;
   line-height: 1.17;
+
+  @media screen and (min-width: 768px) {
+    padding: 26px 0px;
+  }
+  @media screen and (min-width: 1200px) {
+    font-size: 26px;
+    line-height: 1.19;
+  }
 }
 .logo-secondary {
   @extend %logo;
   font-size: 24px;
   line-height: 1.17;
   color: $secondary2-color;
+
+  @media screen and (min-width: 1200px) {
+    font-size: 26px;
+    line-height: 1.19;
+  }
 }
 .logo-web {
   color: $accent-color;

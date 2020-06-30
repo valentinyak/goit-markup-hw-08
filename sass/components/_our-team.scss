@@ -3,6 +3,10 @@
   padding: 60px 0px;
 
   background: $secondary-bg-color;
+
+  @media screen and (min-width: 1200px) {
+    padding: 94px 0px;
+  }
 }
 .our-team .our-team-position {
   color: $secondary1-color;
@@ -20,13 +24,26 @@
 
   font-size: 28px;
   line-height: 1.18;
+
+  @media screen and (min-width: 1200px) {
+    margin: 0px 0px 50px;
+    font-size: 36px;
+    line-height: 1.17;
+  }
 }
 .our-team-list {
   @extend %margin-padding-none;
+
+  @media screen and (min-width: 768px) {
+    @include displayFlex();
+    flex-wrap: wrap;
+    margin: -15px;
+  }
 }
 
 .our-team-list > li {
   padding-bottom: 24px;
+  width: 100%;
 
   background-color: $secondary2-color;
   box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14),
@@ -34,8 +51,20 @@
   border-radius: 4px;
   overflow: hidden;
 
-  &:not(:last-child) {
-    margin-bottom: 30px;
+  @media screen and (max-width: 767px) {
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    width: calc((100% - 4 * 15px) / 2);
+    margin: 15px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: calc((100% - 8 * 15px) / 4);
+    margin: 15px;
   }
 }
 .our-team-foto {

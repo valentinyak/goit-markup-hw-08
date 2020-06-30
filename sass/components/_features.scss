@@ -1,5 +1,9 @@
 .features {
   padding: 60px 0px;
+
+  @media screen and (min-width: 1200px) {
+    padding: 94px 0px;
+  }
 }
 .features-title-h3 {
   margin: 0px 0px 10px;
@@ -8,17 +12,37 @@
   font-size: 14px;
   line-height: 1.14;
   text-transform: uppercase;
+
+  @media screen and (max-width: 767px) {
+    text-align: center;
+  }
 }
 .features-list {
   @extend %margin-padding-none;
-}
-/* .features-list li {
-  width: calc((100%-30 * 3) / 4);
 
-  &:not(:last-child) {
-    margin-right: 30px;
+  @media screen and (min-width: 768px) {
+    @include displayFlex();
+    flex-wrap: wrap;
+    margin: -15px;
   }
-} */
+}
+.features-list li {
+  @media screen and (max-width: 767px) {
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    width: calc((100% - 4 * 15px) / 2);
+    margin: 15px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: calc((100% - 8 * 15px) / 4);
+    margin: 15px;
+  }
+}
 .features-blok {
   @include displayFlex();
   justify-content: center;
@@ -32,7 +56,6 @@
 }
 .features-paragraph {
   @extend %margin-padding-none;
-  margin-bottom: 30px;
 
   color: $secondary1-color;
   font-size: 14px;

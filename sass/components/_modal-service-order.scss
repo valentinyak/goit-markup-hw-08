@@ -240,8 +240,8 @@ body.modal-open {
   @include displayFlex();
   align-items: center;
 
-  font-size: 14px;
-  line-height: 1.71;
+  font-size: 12px;
+  line-height: 1.17;
   letter-spacing: 0.03em;
   color: $secondary1-color;
 }
