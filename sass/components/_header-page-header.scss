@@ -3,10 +3,16 @@
 
   @include displayFlex();
   justify-content: space-between;
+  max-width: 767px;
 
   border-bottom: 1px solid #ececec;
 
   @media screen and (min-width: 768px) {
     align-items: center;
+    max-width: 768px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    max-width: 1200px;
   }
 }
